@@ -1,27 +1,16 @@
-
 #!/usr/bin/python3
-""" The minimum operations coding challenge."""
+"""operations to make n equal to 1"""
+
 
 def minOperations(n):
-    """Computes the fewest number of operations needed to result
-    in exactly n H characters.
-    """
-    
-    if not isinstance(n, int):
+    """minOperations function"""
+    if n <= 1:
         return 0
-    ops_count = 0
-    clipboard = 0
-    done = 1
-    
-    while done < n:
-        if clipboard == 0 or (n - done) % done == 0:
-            # copy all and paste
-            clipboard = done
-            done += clipboard
-            ops_count += 2
-        else:
-            # paste
-            done += clipboard
-            ops_count += 1
-            
-    return ops_count
+    operations = 0
+    divisor = 2
+    while n > 1:
+        while n % divisor == 0:
+            operations += divisor
+            n //= divisor
+        divisor += 1
+    return operations
