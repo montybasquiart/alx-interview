@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """
-Main file for testing
+Function to determine the minimum number of coins needed to meet a given amount
 """
 
 
 def makeChange(coins, amount):
     """
-    How many of this type of coin can I get with my money? Okay,
-        I'll take that many. Now, how much money do I have left?
-        And how many coins do I have in my pocket?
+    Determine the minimum number of coins needed to meet a given amount.
     """
     if amount < 1:
         return 0
