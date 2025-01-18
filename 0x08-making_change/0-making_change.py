@@ -3,6 +3,7 @@
 Function to determine the minimum number of coins needed to meet a given amount
 """
 
+
 def makeChange(coins, amount):
     """
     Determine the minimum number of coins needed to meet a given amount.
